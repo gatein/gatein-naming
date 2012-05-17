@@ -7,18 +7,85 @@
      <version>1.1.0-Beta02</version>
    </parent>
 
-   <name>GateIn Naming</name>
    <groupId>org.gatein.naming</groupId>
    <artifactId>gatein-naming</artifactId>
-   <version>1.0.0-Beta01</version>
-	<build>
+   <version>1.0.0-SNAPSHOT</version>
+
+   <name>GateIn Naming</name>
+   <description>GateIn Naming - In-memory JNDI Implementation</description>
+   <url>https://github.com/gatein/gatein-naming</url>
+
+   <licenses>
+      <license>
+         <name>LGPL 2.1</name>
+         <url>http://www.gnu.org/licenses/lgpl.html</url>
+      </license>
+   </licenses>
+
+   <scm>
+      <connection>scm:git:git@github.com:gatein/gatein-naming.git</connection>
+      <developerConnection>scm:git:git@github.com:gatein/gatein-naming.git</developerConnection>
+      <url>https://github.com/gatein/gatein-naming</url>
+   </scm>
+
+   <developers>
+      <developer>
+         <id>mstruk</id>
+         <name>Marko Strukelj</name>
+         <email>mstruk@redhat.com</email>
+         <organization>JBoss a division of Red Hat</organization>
+         <organizationUrl>http://www.jboss.org</organizationUrl>
+      </developer>
+   </developers>
+
+   <distributionManagement>
+      <repository>
+         <id>jboss-releases-repository</id>
+         <name>JBoss Releases Repository</name>
+         <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
+      </repository>
+      <snapshotRepository>
+         <id>jboss-snapshots-repository</id>
+         <name>JBoss Snapshots Repository</name>
+         <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+      </snapshotRepository>
+   </distributionManagement>
+
+   <repositories>
+      <repository>
+         <id>jboss-public-repository-group</id>
+         <name>JBoss Public Repository Group</name>
+         <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+         <layout>default</layout>
+         <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+         </releases>
+         <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+         </snapshots>
+      </repository>
+   </repositories>
+
+   <build>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+      <plugins>
+         <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+               <source>1.5</source>
+               <target>1.5</target>
+            </configuration>
+         </plugin>
+      </plugins>
 	</build>
+
 	<dependencies>
       <dependency>
          <groupId>org.jboss.logging</groupId>
