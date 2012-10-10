@@ -9,7 +9,7 @@
 
    <groupId>org.gatein.naming</groupId>
    <artifactId>gatein-naming</artifactId>
-   <version>1.1.0.Beta01-SNAPSHOT</version>
+   <version>1.1.0.Beta01</version>
 
    <name>GateIn Naming</name>
    <description>GateIn Naming - In-memory JNDI Implementation</description>
